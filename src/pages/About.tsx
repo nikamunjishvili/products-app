@@ -1,4 +1,3 @@
-import React from 'react'
 import { MainLayout } from '../common/components/_organisms'
 
 const About = () => {
