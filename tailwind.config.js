@@ -13,7 +13,9 @@ export default {
     },
     colors:{
       'gray': '#999999',
-      'lightgreen': '#00B207'
+      'lightgreen': '#00B207',
+      'graywhite': '#E6E6E6',
+      'hovergreen':'#2C742F'
     },
   },
   plugins: [],
