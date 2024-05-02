@@ -28,7 +28,7 @@ const App = () => {
               height={150}
             />
             <div>
-              <div>
+              <div className="w-[321px] grid-cols-2  place-content-center">
                 <h4>{product.title}</h4>
                 <span>${product.price}</span>
                 <img src={ratingsvg} alt="rating" />
