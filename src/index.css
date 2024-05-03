@@ -7,3 +7,28 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+.heart-container, .eye-container{
+  opacity: 0;
+  width: 0;
+  transition: opacity 200ms, width 200ms;
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  border-radius: 100%;
+  background-color: white;
+  border: 1px solid #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eye-container {
+  top: 85px;
+}
+#product {
+  position: relative;
+}
+#product:hover .heart-container, #product:hover .eye-container{
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+}
