@@ -45,7 +45,7 @@ const App = () => {
               />
               <div className="flex">
                 <div>
-                  <h4 className="text-[14px]">{product.title}</h4>
+                  <h4 className="text-[14px] h-[70px] overflow-scroll mb-4">{product.title}</h4>
                   <span>${product.price}</span>
                   <img src={ratingsvg} alt="rating" />
                 </div>
