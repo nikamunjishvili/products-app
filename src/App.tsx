@@ -6,6 +6,7 @@ import heart from "../public/Heart.svg";
 import eye from "../public/Eye-1.svg";
 
 
+
 const App = () => {
   const { data, loading, error } = useFetch(
     "https://fakestoreapi.com/products"
@@ -27,7 +28,7 @@ const App = () => {
             <div
               key={product.id}
               id="product"
-              className="w-[200px] h-[400px] flex justify-evenly flex-col border border-graywhite rounded-lg px-4 cursor-pointer hover:border-hovergreen transition duration-300 ease-in-out hover:shadow-lg hover:bg-green-500 hover:bg-opacity-10 relative "
+              className="w-[200px] h-[400px] flex justify-evenly flex-col border border-graywhite rounded-lg px-4 cursor-pointer hover:border-bordergreen transition duration-300 ease-in-out hover:shadow-lg hover:bg-green-500 hover:bg-opacity-10 relative "
             >
               <div className="heart-container">
                 <img src={heart} className="heart" alt="Heart icon" />
@@ -49,7 +50,7 @@ const App = () => {
                   <img src={ratingsvg} alt="rating" />
                 </div>
                 <button className="items-end flex w-[50px]">
-                  <div className="bg-graywhite rounded-xl w-[25px] h-[25px] flex items-center justify-center">
+                  <div className="bg-graywhite rounded-2xl w-[30px] h-[30px] flex items-center justify-center hover:bg-carthovergreen">
                     <img src={cartbtn} alt="cart icon" width={15} height={15} />
                   </div>
                 </button>
