@@ -15,7 +15,8 @@ export default {
       'gray': '#999999',
       'lightgreen': '#00B207',
       'graywhite': '#E6E6E6',
-      'hovergreen':'#2C742F'
+      'bordergreen': '#2C742F',
+      'carthovergreen': '#00B207'
     },
   },
   plugins: [],
