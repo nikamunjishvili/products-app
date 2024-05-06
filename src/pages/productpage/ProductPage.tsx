@@ -47,8 +47,8 @@ const ProductPage = () => {
                   <Love width={52} height={52} />
                 </button>
               </div>
-              <p className="relative  top-[291px] mt-2 text-lightgray ">
-                Category: <span>{data.category}</span>
+              <p className="relative  top-[291px] mt-2  ">
+                Category: <span className="text-lightgray">{data.category}</span>
               </p>
             </div>
           </div>
