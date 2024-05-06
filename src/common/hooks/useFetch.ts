@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Producttypes } from "../types";
 
 const useFetch = (url: string) => {
-  const [data, setData] = useState<Producttypes[]>([]);
+  const [data, setData] = useState<Producttypes | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
