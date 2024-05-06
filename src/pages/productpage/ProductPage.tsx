@@ -30,7 +30,7 @@ const ProductPage = () => {
               />
             </div>
             <div className="relative ml-8 w-[1029px]">
-              <h1 className="absolute top-[71px] right-[273px] w-[493px] text-3xl font-bold 0">
+              <h1 className="absolute top-[67px] right-[-100px] w-[866px] text-2xl font-bold 0">
                 {data.title}
               </h1>
               <p className="relative  top-[139px] text-bordergreen font-bold text-2xl mt-5">
