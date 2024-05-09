@@ -19,7 +19,7 @@ const ProductPage = () => {
     <MainLayout>
       {data && (
         <>
-          <div className="flex gap-28 px-64 my-20">
+          <div className="flex gap-28 px-64 my-20 justify-center">
             <div className="">
               <img
                 className=" w-[350px] h-[350px] "
