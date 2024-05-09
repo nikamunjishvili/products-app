@@ -18,7 +18,8 @@ export default {
       'lightgray': '#808080',
       'bordergreen': '#2C742F',
       'carthovergreen': '#00B207',
-      'white':'#fff'
+      'white':'#fff',
+      'darkgray':'#1A1A1A'
     },
   },
   plugins: [],

@@ -19,27 +19,23 @@ const ProductPage = () => {
     <MainLayout>
       {data && (
         <>
-          <div className=" w-[1320px] h-[558px] mx-auto flex">
-            <div className="w-[700px]">
+          <div className="flex gap-28 px-64 my-20">
+            <div className="">
               <img
-                className="w-[300px] h-[350px] relative left-[144px] top-[54px]"
+                className=" w-[350px] h-[350px] "
                 src={data.image}
                 alt={data.title}
                 width={100}
                 height={100}
               />
             </div>
-            <div className="relative ml-8 w-[1029px]">
-              <h1 className="absolute top-[67px] right-[-100px] w-[866px] text-2xl font-bold 0">
-                {data.title}
-              </h1>
-              <p className="relative  top-[139px] text-bordergreen font-bold text-2xl mt-5">
+            <div className="w-[480px]">
+              <h1 className=" text-2xl font-bold 0">{data.title}</h1>
+              <p className=" text-bordergreen font-bold text-2xl mt-5 border-b border-graywhite pb-3">
                 ${data.price}
               </p>
-              <p className="relative  top-[167px] text-lightgray">
-                {data.description}
-              </p>
-              <div className="relative  top-[213px] flex gap-5 ">
+              <p className=" text-lightgray my-5 border-b border-graywhite pb-3">{data.description}</p>
+              <div className="flex gap-5 border-b border-graywhite pb-3">
                 <button className="bg-carthovergreen py-2 px-4 rounded-3xl w-[350px] flex flex-row-reverse items-center justify-center gap-4 text-white">
                   <Shop width={15} height={15} /> Add to Cart
                 </button>
@@ -47,8 +43,8 @@ const ProductPage = () => {
                   <Love width={52} height={52} />
                 </button>
               </div>
-              <p className="relative  top-[291px] mt-2 text-lightgray ">
-                Category: <span>{data.category}</span>
+              <p className="mt-2 text-darkgray ">
+                Category: <span className="text-lightgray">{data.category}</span>
               </p>
             </div>
           </div>
