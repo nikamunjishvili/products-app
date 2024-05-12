@@ -1,0 +1,15 @@
+.MuiSlider-root {
+    color: #00B207 !important;
+}
+.Title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #1A1A1A;
+}
+.Title-2 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    color: #1A1A1A;
+}
