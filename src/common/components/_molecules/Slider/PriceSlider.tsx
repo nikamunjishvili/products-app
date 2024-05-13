@@ -28,6 +28,7 @@ const PricesSlider: React.FC<Props> = ({ setPriceRange, filterProducts }) => {
   const formattedValue0 = !isNaN(value[0]) ? value[0].toLocaleString() : "";
   const formattedValue1 = !isNaN(value[1]) ? value[1].toLocaleString() : "";
 
+
   return (
     <div
       style={{
