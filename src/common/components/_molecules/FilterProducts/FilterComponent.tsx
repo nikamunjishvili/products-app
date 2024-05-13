@@ -1,20 +1,9 @@
-/** @format */
-
-import React, { useState } from "react";
-
-
-
-interface Product {
-  id: number;
-  title: string;
-  category: string;
-  price: number;
-  image: string;
-}
+import React, { Dispatch, SetStateAction, useState } from "react";
+import { Product } from "../../../types";
 
 interface Props {
   products: Product[];
-  setFilteredProducts: React.Dispatch<React.SetStateAction<Product[] | null>>;
+  setFilteredProducts: Dispatch<SetStateAction<Product[] | any>>;
 }
 
 const FilterComponent: React.FC<Props> = ({
@@ -37,7 +26,7 @@ const FilterComponent: React.FC<Props> = ({
   };
 
   const categoryCounts: { [key: string]: number } = products.reduce(
-    (acc, product) => {
+    (acc: any, product) => {
       acc[product.category] = (acc[product.category] || 0) + 1;
       return acc;
     },

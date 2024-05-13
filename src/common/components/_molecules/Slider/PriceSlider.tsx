@@ -1,13 +1,12 @@
-// PriceSlider.js
-import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
 import "./PriceSlider.css";
+import { useState } from "react";
 
-const PriceSlider = ({ setPriceRange, filterProducts }) => {
-  const [value, setValue] = React.useState([2, 10]);
+function PricesSlider ({ setPriceRange, filterProducts }: any)  {
+  const [value, setValue] = useState([2, 10]);
 
-  const rangeSelector = (event, newValue) => {
+  const rangeSelector = (newValue: any) => {
     setValue(newValue);
     setPriceRange({ min: newValue[0], max: newValue[1] });
     filterProducts(); 
@@ -38,4 +37,4 @@ const PriceSlider = ({ setPriceRange, filterProducts }) => {
   );
 };
 
-export default PriceSlider;
+export default PricesSlider;
