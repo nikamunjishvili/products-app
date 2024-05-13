@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MainLayout } from "./common/components/_organisms";
 import useFetch from "./common/hooks/useFetch";
 import ratingsvg from "../public/Rating.svg";
@@ -7,13 +7,14 @@ import heart from "../public/Heart.svg";
 import eye from "../public/Eye-1.svg";
 import { Link } from "react-router-dom";
 import FilterComponent from "./common/components/_molecules/FilterProducts/FilterComponent";
-import PriceSlider from "./common/components/_molecules/PriceSlider/PriceSlider";
+import PricesSlider from "./common/components/_molecules/Slider/PriceSlider";
+import { Product } from "./common/types";
 
 const App = () => {
   const { data, loading, error } = useFetch(
     "https://fakestoreapi.com/products"
   );
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [priceRange, setPriceRange] = useState({ min: 0, max: 100 });
 
   if (loading) {
@@ -49,7 +50,7 @@ const App = () => {
             products={data}
             setFilteredProducts={setFilteredProducts}
           />
-          <PriceSlider
+          <PricesSlider
             setPriceRange={setPriceRange}
             filterProducts={filterProductsByPrice}
           />
