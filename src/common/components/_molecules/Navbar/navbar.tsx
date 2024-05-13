@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { Cart, Heart, Plant } from "../../_atoms";
+import { useCart } from "../../../../context/ProductsContext";
 
 const Navbar = () => {
+  const {  products } = useCart();
+
   return (
     <div className="w-full h-[80px] bg-white text-black flex  items-center justify-between px-72">
       <Link to={"/"} className="flex">
@@ -20,8 +23,11 @@ const Navbar = () => {
       </div>
       <div className="flex items-center gap-3">
         <Heart width={45.67} height={27.8} />
-        <span className=" text-gray leading-6 text-2xl">|</span>
+       <Link to="/products-cart">
+       <span className=" text-gray leading-6 text-2xl">|</span>
           <Cart width={34} height={34}/>
+          <span>{products.length}</span>
+       </Link>
         <div>
           <h6 className="flex flex-col">
             Shopping Cart :<span>57.00$</span>

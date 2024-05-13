@@ -3,6 +3,8 @@ import App from "./App.tsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ProductPage from "./pages/productpage/ProductPage.tsx";
+import ProductsContextProvider from "./context/ProductsContext.tsx";
+import ProductsCartDetails from "./pages/ProductsCartDetails.tsx";
 
 const router = createBrowserRouter([
   {
@@ -13,8 +15,14 @@ const router = createBrowserRouter([
     path: "/:id",
     element: <ProductPage />,
   },
+  {
+    path: "/products-cart",
+    element: <ProductsCartDetails />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <RouterProvider router={router} />
+  <ProductsContextProvider>
+    <RouterProvider router={router} />
+  </ProductsContextProvider>
 );
