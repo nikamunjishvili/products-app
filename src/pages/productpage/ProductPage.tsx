@@ -3,9 +3,11 @@ import { MainLayout } from "../../common/components/_organisms";
 import useFetch from "../../common/hooks/useFetch";
 import Love from "../../common/components/_atoms/Icon/Love";
 import Shop from "../../common/components/_atoms/Icon/Shop";
+import { useCart } from "../../context/ProductsContext";
 
 const ProductPage = () => {
   const { id } = useParams();
+  const { addProducts, products } = useCart();
   const { data, loading, error } = useFetch(
     `https://fakestoreapi.com/products/${id}`
   );
@@ -15,6 +17,9 @@ const ProductPage = () => {
   if (error) {
     return <MainLayout>Error:{error}</MainLayout>;
   }
+
+  console.log("producrtsssssssss",products)
+
   return (
     <MainLayout>
       {data && (
@@ -38,7 +43,7 @@ const ProductPage = () => {
                 {data.description}
               </p>
               <div className="flex gap-5 border-b border-graywhite pb-3">
-                <button className="bg-carthovergreen py-2 px-4 rounded-3xl w-[350px] flex flex-row-reverse items-center justify-center gap-4 text-white">
+                <button className="bg-carthovergreen py-2 px-4 rounded-3xl w-[350px] flex flex-row-reverse items-center justify-center gap-4 text-white" onClick={() => addProducts(data)}>
                   <Shop width={15} height={15} /> Add to Cart
                 </button>
                 <button>

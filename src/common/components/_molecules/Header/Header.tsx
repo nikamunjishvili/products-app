@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { HomeIcon, Rightarrow } from "../../_atoms";
 
 const Header = () => {
+
   return (
     <div className="relative bg-cover bg-[url('/cucumber.jpg')] h-28">
       <div className="absolute inset-0 transform bg-cover bg-[url('/cucumber.jpg')] -rotate-180"></div>

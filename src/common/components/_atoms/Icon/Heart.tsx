@@ -3,8 +3,8 @@ import { IconProps } from "../../../types";
 const Heart = ({ width, height }: IconProps) => {
   return (
     <svg
-    width={width}
-    height={height}
+      width={width}
+      height={height}
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
