@@ -19,7 +19,8 @@ export default {
       'bordergreen': '#2C742F',
       'carthovergreen': '#00B207',
       'white':'#fff',
-      'darkgray':'#1A1A1A'
+      'darkgray':'#1A1A1A',
+      'gray':'#CCCCCC'
     },
   },
   plugins: [],

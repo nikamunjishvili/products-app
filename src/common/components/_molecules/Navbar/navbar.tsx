@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Plant } from "../../_atoms";
+import { Cart, Heart, Plant } from "../../_atoms";
 
 const Navbar = () => {
   return (
@@ -18,11 +18,15 @@ const Navbar = () => {
           Search
         </button>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center gap-3">
         <Heart width={45.67} height={27.8} />
-        <h6>
-          Shopping Cart:<span>57.00$</span>
-        </h6>
+        <span className=" text-gray leading-6 text-2xl">|</span>
+          <Cart width={34} height={34}/>
+        <div>
+          <h6 className="flex flex-col">
+            Shopping Cart :<span>57.00$</span>
+          </h6>
+        </div>
       </div>
     </div>
   );
