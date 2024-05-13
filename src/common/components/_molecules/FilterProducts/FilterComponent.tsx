@@ -12,7 +12,7 @@ const FilterComponent: React.FC<Props> = ({
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
 
-  const handleCategoryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCategoryChange = (event: any) => {
     const category = event.target.value;
     setSelectedCategory(category);
     if (category) {
@@ -21,9 +21,10 @@ const FilterComponent: React.FC<Props> = ({
       );
       setFilteredProducts(filteredProducts);
     } else {
-      setFilteredProducts(null);
+      setFilteredProducts(products);
     }
   };
+  
 
   const categoryCounts: { [key: string]: number } = products.reduce(
     (acc: any, product) => {

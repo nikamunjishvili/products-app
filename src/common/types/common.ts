@@ -15,7 +15,6 @@ export interface Producttypes {
     count: number;
   };
 };
-
 export interface Product {
   id: number;
   title: string;

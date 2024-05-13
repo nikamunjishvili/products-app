@@ -1,19 +1,33 @@
 import Typography from "@material-ui/core/Typography";
 import Slider from "@material-ui/core/Slider";
-import "./PriceSlider.css";
+import "./priceSlider.css";
 import { useState } from "react";
 
-function PricesSlider ({ setPriceRange, filterProducts }: any)  {
-  const [value, setValue] = useState([2, 10]);
+interface PriceRange {
+  min: number;
+  max: number;
+}
 
-  const rangeSelector = (newValue: any) => {
-    setValue(newValue);
-    setPriceRange({ min: newValue[0], max: newValue[1] });
+interface Props {
+  setPriceRange: (range: PriceRange) => void;
+  filterProducts: () => void;
+}
+
+const PricesSlider: React.FC<Props> = ({ setPriceRange, filterProducts }) => {
+  const [value, setValue] = useState<number[]>([2, 10]);
+
+  const rangeSelector = (_event: React.ChangeEvent<{}>, newValue: number | number[]) => {
+    setValue(newValue as number[]);
+    if (typeof newValue === 'object' && newValue.length === 2) {
+      const [min, max] = newValue;
+      setPriceRange({ min, max });
+    }
     filterProducts(); 
   };
 
-  const formattedValue0 = value[0].toLocaleString();
-  const formattedValue1 = value[1].toLocaleString();
+  const formattedValue0 = !isNaN(value[0]) ? value[0].toLocaleString() : "";
+  const formattedValue1 = !isNaN(value[1]) ? value[1].toLocaleString() : "";
+
 
   return (
     <div
@@ -32,7 +46,7 @@ function PricesSlider ({ setPriceRange, filterProducts }: any)  {
         min={0}
         max={1500}
       />
-     Price: <span className="Title-2">{formattedValue0} - {formattedValue1}</span>
+     Price: <span className="text-darkgray">{formattedValue0} - {formattedValue1}</span>
     </div>
   );
 };

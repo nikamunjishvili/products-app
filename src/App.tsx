@@ -36,7 +36,7 @@ const App = () => {
     );
     setFilteredProducts(filtered);
   };
-
+  
   const productsToRender =
     filteredProducts.length > 0 ? filteredProducts : null;
 
